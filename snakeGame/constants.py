@@ -19,4 +19,4 @@ cell_size= 10
 col_count = window_w // cell_size
 row_count = window_h // cell_size
 
-image = r'images\part.png'
+image = r'images\snakebody.png'
