@@ -1,5 +1,5 @@
 import pygame
-
+import os
 #window_size
 window_w = 720
 window_h = 480
@@ -19,4 +19,5 @@ cell_size= 10
 col_count = window_w // cell_size
 row_count = window_h // cell_size
 
-image = r'images\snakebody.png'
+image = r'../images/snakebody.png'
+#image = os.path.join("images", "snakebody.png")

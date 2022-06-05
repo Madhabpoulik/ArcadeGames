@@ -3,7 +3,7 @@ from constants import *
 
 class Snake(pygame.sprite.Sprite):
     def __init__(self, img):
-        super().__int__()
+        super().__init__()
         self.image = pygame.image.load(img)
         self.image = pygame.transform.scale(self.image, (cell_size, cell_size))
         self.body = [[col_count // 2, row_count // 2],
