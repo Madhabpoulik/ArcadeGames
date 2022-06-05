@@ -16,7 +16,7 @@ pygame.display.set_caption('Snake')
 
 walls_list = Walls.createList(Walls(), cell_size)
 
-def print_text(font, text, textpos = None):
+def print_text(font, text, color, textpos = None):
     font = pygame.font.SysFont(font[0], font[1])
     text = font.render(text, 1, color)
     if textpos is None:
@@ -86,7 +86,7 @@ def pop_up(msg):
     entry = Entry(popupwin, width=15)
     entry.pack()
     entry.insert(0, 'Anonymous')
-    entry.blind()
+    entry.bind()
     entry.focus_set()
     
     b1 = Button(popupwin, text="Okey", command=set_name)
@@ -94,7 +94,7 @@ def pop_up(msg):
     
     popupwin.mainloop()
         
-
+        
 hero = Snake(image)
 
 clock = pygame.time.Clock()
@@ -146,11 +146,11 @@ def main():
             else:
                 hero.body.pop()
         
-        if hero.hit_Walls(walls_list):
+        if hero.hit_walls(walls_list):
             apple.set_random_xy()
             if hero.lives <= 0:
                 game_over = True
-                print_text(Large_font, red)
+                print_text(Large_font, "GAME OVER", red)
         
         clock.tick(hero.speed)
         
