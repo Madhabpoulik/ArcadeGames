@@ -19,5 +19,4 @@ cell_size= 10
 col_count = window_w // cell_size
 row_count = window_h // cell_size
 
-image = r'../images/snakebody.png'
-#image = os.path.join("images", "snakebody.png")
+image = '/home/kirin/Documents/ArcadeGames/snakeGame/images/snakebody.png'

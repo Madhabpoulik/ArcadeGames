@@ -59,8 +59,7 @@ class Snake(pygame.sprite.Sprite):
         hit = False
         
         for wall in walls:
-            head_rect = pygame.Rect(self.body[0][0] * cell_size, self[0][1] * cell_size,
-                                    cell_size, cell_size)
+            head_rect = pygame.Rect(self.body[0][0] * cell_size, self.body[0][1] * cell_size, cell_size, cell_size)
             if(wall.colliderect(head_rect)):
                 self.after_hit()
                 hit = True
